@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Train Ticket Booking</title>
+    <link rel="stylesheet" href="tatkal.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Train Ticket Booking</h1>
+        <form id="bookingForm">
+            <div class="form-group">
+                <label for="from">From:</label>
+                <select id="from" required>
+                    <option value="">Select From Station</option>
+                    <!-- Add options for all Indian railway cities here -->
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="to">To:</label>
+                <select id="to" required>
+                    <option value="">Select To Station</option>
+                    <!-- Add options for all Indian railway cities here -->
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="date">Date of Travel:</label>
+                <input type="date" id="date" required>
+            </div>
+            <div class="form-group">
+                <label for="class">Class:</label>
+                <select id="class" required>
+                    <option value="">Select Class</option>
+                    <option value="1A">First AC (1A)</option>
+                    <option value="2A">Second AC (2A)</option>
+                    <option value="3A">Third AC (3A)</option>
+                    <option value="FC">First Class (FC)</option>
+                    <option value="CC">AC Chair Car (CC)</option>
+                    <option value="SL">Sleeper (SL)</option>
+                    <option value="2S">Second Sitting (2S)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="compartment">Compartment:</label>
+                <select id="compartment" required>
+                    <option value="">Select Compartment</option>
+                    <option value="G">General</option>
+                    <option value="L">Ladies</option>
+                    <option value="S">Senior citizen</option>
+                    <option value="D">Duty</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="passengers">Number of Passengers:</label>
+                <input type="number" id="passengers" min="1" max="6" required>
+            </div>
+            <div class="form-group">
+                <label for="bookingType">Booking Type:</label>
+                <select id="bookingType" required>
+                    <option value="">Select Booking Type</option>
+                    <option value="normal">Normal Booking</option>
+                    <option value="tatkal">Tatkal Booking</option>
+                </select>
+            </div>
+            <div id="passengerDetails"></div>
+            <button type="submit">Book Tickets</button>
+        </form>
+        <div id="ticketDetails" style="display: none;">
+            <h2>Booking Details</h2>
+            <div id="bookingSummary"></div>
+            <button id="downloadPDF">Download Ticket</button>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="tatkal.js"></script>
+</body>
+</html>

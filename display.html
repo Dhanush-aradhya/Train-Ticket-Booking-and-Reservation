@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cancel Train Ticket</title>
+    <link rel="stylesheet" href="display.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Cancel Your Train Ticket</h1>
+        <form id="cancellationForm">
+            <div class="form-group">
+                <label for="seatId">Seat ID:</label>
+                <input type="text" id="seatId" required placeholder="Enter your seat ID">
+            </div>
+            <button type="submit">Cancel Ticket</button>
+        </form>
+    </div>
+    <div id="alertModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2 >Cancellation Successful</h2>
+            <p id="alertMessage"></p>
+        </div>
+    </div>
+    <script src="display.js"></script>
+</body>
+</html>
