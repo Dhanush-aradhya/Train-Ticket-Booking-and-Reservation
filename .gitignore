@@ -1,0 +1,17 @@
+# Node.js
+node_modules/
+.env
+npm-debug.log
+
+# PHP/Server
+*.log
+.DS_Store
+Thumbs.db
+
+# Sensitive files
+*.env
+config.php
+
+# OS
+.DS_Store
+Thumbs.db 

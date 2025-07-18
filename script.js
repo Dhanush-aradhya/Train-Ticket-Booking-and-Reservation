@@ -1,3 +1,6 @@
+// script.js - Client-side logic for Train Ticket Booking System
+// Handles captcha, login, signup, and form validation
+
 // Generate a random captcha
 function generateCaptcha() {
     return Math.random().toString(36).substr(2, 6);
@@ -94,75 +97,6 @@ document.getElementById('signupForm')?.addEventListener('submit', function(e) {
     
 });
 
-/*Reset Password
-document.getElementById('resetPasswordForm')?.addEventListener('submit', function(e) {
-    e.preventDefault();
-    const email = document.getElementById('email').value;
-
-    fetch('http://localhost:5500/reset-password', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email })
-    })
-    .then(response => response.json())
-    .then(data => alert(data.message))
-    .catch(error => console.error('Error:', error));
-});
-
-document.getElementById('sendOTP')?.addEventListener('click', function() {
-    const email = document.getElementById('email').value;
-    
-    fetch('http://localhost:5500/send-otp', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email })
-    })
-    .then(response => response.json())
-    .then(data => {
-        // Display the OTP on the screen
-        const otpElement = document.getElementById('otp');
-        otpElement.textContent = `Your OTP is: ${data.otp}`;
-        
-        // Display a countdown timer
-        const countdownElement = document.getElementById('otpCountdown');
-        let timeLeft = 30; // 30 seconds
-        countdownElement.textContent = `OTP expires in ${timeLeft} seconds`;
-        const countdownInterval = setInterval(() => {
-            timeLeft--;
-            countdownElement.textContent = `OTP expires in ${timeLeft} seconds`;
-            if (timeLeft === 0) {
-                clearInterval(countdownInterval);
-                otpElement.textContent = '';
-                countdownElement.textContent = '';
-            }
-        }, 1000);
-    })
-    .catch(error => console.error('Error:', error));
-});
-
-
-// OTP Login - Verify OTP
-document.getElementById('otpLoginForm')?.addEventListener('submit', function(e) {
-    e.preventDefault();
-    const email = document.getElementById('email').value;
-    const otp = document.getElementById('otp').value;
-
-    fetch('http://localhost:5500/verify-otp', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, otp })
-    })
-    .then(response => response.json())
-    .then(data => {
-        alert(data.message);
-        if (data.message === 'Login successful') {
-            // Redirect to dashboard or home page
-            // window.location.href = 'dashboard.html';
-        }
-    })
-    .catch(error => console.error('Error:', error));
-});
-
 // Verify Aadhar
 document.getElementById('verifyAadhar')?.addEventListener('click', function() {
     const aadhar = document.getElementById('aadhar').value;
@@ -175,7 +109,7 @@ document.getElementById('verifyAadhar')?.addEventListener('click', function() {
     .then(response => response.json())
     .then(data => alert(data.message))
     .catch(error => console.error('Error:', error));
-});*/
+});
 
 // Initialize captcha on page load
 window.addEventListener('load', showCaptcha);

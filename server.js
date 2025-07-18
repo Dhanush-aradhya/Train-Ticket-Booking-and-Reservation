@@ -18,8 +18,8 @@ let users = [];
 const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-        user: 'your-email@gmail.com',
-        pass: 'your-email-password'
+        user: 'your-email@example.com', // <-- Replace with your email
+        pass: 'your-email-password'      // <-- Replace with your email password or app password
     }
 });
 
