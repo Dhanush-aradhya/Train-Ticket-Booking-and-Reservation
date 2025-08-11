@@ -4,7 +4,7 @@ A web-based application for booking and managing train tickets, supporting both 
 
 ## Features
 - User registration and login with captcha and Aadhar verification
-- Book train tickets (choose stations, class, compartment, booking type)
+- Book train tickets (choose stations, class, compartment, booking type
 - Cancel booked tickets
 - Dashboard for easy navigation
 - Email/OTP logic (Node.js backend, for future integration)
